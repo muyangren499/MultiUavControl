@@ -6,6 +6,11 @@
     android:layout_gravity="bottom"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SYS ID: 1"/>
+
     <com.jjoe64.graphview.GraphView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,13 +19,40 @@
         android:layout_weight="1"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dip"
-            android:text="SDFSDF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_weight="1"/>
+            android:orientation="vertical"
+            android:paddingRight="15dip">
+            <TextView
+                android:id="@+id/arming_state"
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:text="Arming Status:\nDisarmed"
+                android:layout_gravity="top"
+                android:layout_weight="1"/>
+            <Button
+                android:id="@+id/button_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ARM"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:text="Battery %:\nNAN"
+                android:layout_gravity="top"
+                android:layout_weight="1"/>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
