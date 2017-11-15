@@ -46,11 +46,13 @@ public class MainActivity extends AppCompatActivity {
         ControlFragment controlFragment1 = new ControlFragment();
         //ControlFragment controlFragment2 = new ControlFragment();
         //MapFragment mapFragment = new MapFragment();
+        PlaceholderFragment placeholderFragment = new PlaceholderFragment();
         final FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragementTransaction = fragmentManager.beginTransaction();
         fragementTransaction.add(R.id.my_layout, controlFragment1, "ControlFragment1");
         //fragementTransaction.add(R.id.my_layout, controlFragment2, "ControlFragment2");
         //fragementTransaction.add(R.id.my_layout, mapFragment, "MapFragment");
+        fragementTransaction.add(R.id.my_layout, placeholderFragment, "PlaceholderFragment");
         fragementTransaction.commit();
 
         new Thread(new ZmqSubscriberTemp()).start();
