@@ -84,8 +84,9 @@ public class MainActivity extends AppCompatActivity {
             parser = new Parser();
 
             Log.d("ZMQSUBSCRIBER", "Attempting to subscribe to publisher");
-            subscriber.connect("tcp://192.168.1.15:5563");
-            while (!subscriber.connect("tcp://192.168.1.15:5563")) {
+            //subscriber.connect("tcp://192.168.1.5:5563");
+            subscriber.connect("tcp://10.42.0.1:5563");
+            while (!subscriber.connect("tcp://10.42.0.1:5563")) {
                 try {
                     this.wait(1000);
                     Log.d("ZMQSUBSCRIBER", "Could not connect to publisher. Will try again");
